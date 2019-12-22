@@ -12,20 +12,20 @@ def print_board(board):
     
 def check_winner(board):
     if board["top-L"] != " ":
-        if board["top-L"] and board["top-M"] == board["top-R"] or\
-           board["top-L"] and board["mid-M"] == board["low-R"] or\
-           board["top-L"] and board["mid-L"] == board["low-L"]:
+        if board["top-L"] == board["top-M"] == board["top-R"] or\
+           board["top-L"] == board["mid-M"] == board["low-R"] or\
+           board["top-L"] == board["mid-L"] == board["low-L"]:
             print("The winner is: ", board["top-L"])
             sys.exit()
     if board["mid-M"] != " ":
-        if board["top-M"] and board["mid-M"] == board["low-M"] or\
-           board["mid-L"] and board["mid-M"] == board["mid-R"] or\
-           board["low-L"] and board["mid-M"] == board["top-R"]:
+        if board["top-M"] == board["mid-M"] == board["low-M"] or\
+           board["mid-L"] == board["mid-M"] == board["mid-R"] or\
+           board["low-L"] == board["mid-M"] == board["top-R"]:
             print("The winner is: ", board["mid-M"])
             sys.exit()
     if board["low-R"] != " ":
-        if board["low-L"] and board["low-M"] == board["low-R"] or\
-           board["top-R"] and board["mid-R"] == board["low-R"]:
+        if board["low-L"] == board["low-M"] == board["low-R"] or\
+           board["top-R"] == board["mid-R"] == board["low-R"]:
             print("The winner is: ", board["low-R"])
             sys.exit()
             
