@@ -15,9 +15,9 @@ def bullet_point_builder(text):
             lines[i] = "* " + lines[i]
     
     bullet_list = ""
-    for i in range(len(lines)):
+    for i in range(len(lines)-1):
         bullet_list = bullet_list + lines[i] + "\n"
-        
+    bullet_list = bullet_list + lines[-1]
     
     
     pyperclip.copy(bullet_list)
