@@ -3,6 +3,7 @@
 #### 2020 January
 
 * add_bullet_points.py
+* rock_paper_scissors.py
 
 
 
