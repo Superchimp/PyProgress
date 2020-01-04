@@ -11,14 +11,17 @@ tableData = [["apples", "oranges", "cherries", "banana"],
 def printTable(table):
     maximum_length = 0
     counter = 0
-    
+    # First find the max character length of the longest 4 item inner list to know how much space we need
     for i in table:
         for j in i:
             for c in j:
                 counter = counter + 1
-            print (j, "=", counter)
+        print ("list:", i, "contains", counter, "characters")
+        if counter >= maximum_length:
+           maximum_length = counter
+        counter = 0
             
-            
+    print ("Maximum character spaces needed: " + str(maximum_length))    
             
             
 if __name__ == "__main__":
