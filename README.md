@@ -4,7 +4,7 @@
 
 * add_bullet_points.py
 * rock_paper_scissors.py
-
+* printTable.py
 
 
 #### 2019 December
