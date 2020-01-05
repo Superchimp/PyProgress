@@ -12,17 +12,37 @@ def printTable(table):
     maximum_length = 0
     counter = 0
     # First find the max character length of the longest 4 item inner list to know how much space we need
-    for i in table:
-        for j in i:
-            for c in j:
+    for i in table:      # looping through inner tables
+        for j in i:      # looping through string in the inner list
+            for c in j:  # looping through each character in the string
                 counter = counter + 1
         print ("list:", i, "contains", counter, "characters")
-        if counter >= maximum_length:
+        if counter >= maximum_length:  # check total number of characters counted in the inner list is a new record
            maximum_length = counter
         counter = 0
             
-    print ("Maximum character spaces needed: " + str(maximum_length))    
-            
+    print ("Maximum character spaces needed: " + str(maximum_length))
+    
+    # Printing the table correctly (Right Justified)
+    
+    for l in table:
+        text = " ".join(l)  # put the list strings together ready to print
+        print(text.rjust(maximum_length + 3))   # add 3 for the 3 spaces just added when joining the list strings
+        
+
+
+def print_Table_v2(table):
+    
+    for j in range(len(table)):
+        for i in range(len(table[j])):
+            count = 1
+        
+    
+    
+    
+    
+    
             
 if __name__ == "__main__":
     printTable(tableData)
+    print_Table_v2(tableData)
