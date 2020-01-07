@@ -33,12 +33,20 @@ def printTable(table):
 
 def print_Table_v2(table):
     
-    for j in range(len(table)):
-        for i in range(len(table[j])):
-            count = 1
+    new_table = []              # hold our reordered table for later printing plus length storage
+    
+    for i in range(len(table[0])):     # makes the same amount of nested lists as source table
+        new_table.append([])
         
+    for y in range(len(table)):
+        for x in range(3):
+            current = table[x][y]
+            new_table[y].append(current)
+            print (x,y)
+        
+    print(new_table)    
     
-    
+    printTable(new_table)
     
     
     
