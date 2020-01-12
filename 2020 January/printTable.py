@@ -46,7 +46,7 @@ def print_Table_v2(table):
         
     print(new_table)    
     
-    printTable(new_table)
+    printTable(new_table) # run the print table with the new list
     
     
     
