@@ -1,7 +1,15 @@
 """Objective:
 Make a function that takes a list of strings and displays it in a well-organised
-table with each column right-justified. Assume that all inner lusts will contain
-the same number of strings."""
+table with each column right-justified. Assume that all inner lists will contain
+the same number of strings. Added difficulty, rearrange the list so example list
+below is instead reading:
+
+apples Alice dogs
+oranges Bob cats
+cherries Carol moose
+banana David goose
+
+Personal Challenge: Design function to be flexible to width and depth of list"""
 
 # Example list
 tableData = [["apples", "oranges", "cherries", "banana"],
@@ -38,13 +46,13 @@ def print_Table_v2(table):
     for i in range(len(table[0])):     # makes the same amount of nested lists as source table
         new_table.append([])
         
-    for y in range(len(table)):
-        for x in range(3):
-            current = table[x][y]
-            new_table[y].append(current)
-            print (x,y)
+    for y in range(len(table[0])):              # y is for the number of items in each nested list
+        for x in range(len(table)):             # x is for the number of nested lists
+            current = table[x][y]               # Using X as across and Y as virtical cords
+            new_table[y].append(current)        # and place them in the required slots in the new_table
+            print (x,y)                         # Testing cords are correct 
         
-    print(new_table)    
+    print(new_table)                            # Print the new_table to view if correct
     
     printTable(new_table) # run the print table with the new list
     
