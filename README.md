@@ -5,6 +5,7 @@
 * add_bullet_points.py
 * rock_paper_scissors.py
 * printTable.py
+* isPhoneNumber.py (regex experiments)
 
 
 #### 2019 December
