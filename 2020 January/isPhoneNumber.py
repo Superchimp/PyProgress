@@ -34,7 +34,27 @@ for i in range(len(message)):
         
 print("Done")
 print("o----------------------------o")
-#                                                                       3      3       4
-phoneNumRegex = re.compile(r"\d{3}-\d{3}-\d{4}")    # alternative to \d\d\d-\d\d\d-\d\d\d\d
+#                                                                               3      3       4
+phoneNumRegex = re.compile(r"\d{3}-\d{3}-\d{4}")            # alternative to \d\d\d-\d\d\d-\d\d\d\d
 mo = phoneNumRegex.search("My number is 415-555-4242 or 415-555-2424")
 print("Phone number found:", mo.group())
+
+print("o----------------------------o")
+
+phoneNumRegex = re.compile(r"(\d{3})-(\d{3}-\d{4})")         # alternative to (\d\d\d)-(\d\d\d-\d\d\d\d)
+mo = phoneNumRegex.search("My number is 415-555-4242.")
+print("print all match objects:", mo.group(0))
+print("print match object 1:", mo.group(1))
+print("print match object 2:", mo.group(2))
+print("print match object groups:", mo.groups())
+areaCode, mainNumber = mo.groups()
+print(areaCode)
+print(mainNumber)
+
+print("o----------------------------o")
+
+phoneNumRegex = re.compile(r"(\(\d{3}\)) (\d{3}-\d{4})")
+mo = phoneNumRegex.search("My phone number is (415) 555-4242.")
+print("print group 1:", mo.group(1))
+print("print group 2:", mo.group(2))
+print("print all groups:", mo.group(0))
