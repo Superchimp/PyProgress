@@ -1,11 +1,14 @@
 ## Py Progress Readme
 
+Repository for storying things learnt and projects while studying python through books and experimentation.
+
 #### 2020 January
 
 * add_bullet_points.py
 * rock_paper_scissors.py
 * printTable.py
 * isPhoneNumber.py (regex experiments)
+* Internation Space Station Tracker
 
 
 #### 2019 December
